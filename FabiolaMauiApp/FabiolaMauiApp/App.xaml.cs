@@ -8,12 +8,12 @@ namespace FabiolaMauiApp
         {
             InitializeComponent();
 
-            var navPage = new NavigationPage(new MinhaPagina());
+            //var navPage = new NavigationPage(new MauiPresentationControls());
 
-            navPage.BarBackground = Colors.Yellow;
-            navPage.BarTextColor = Colors.Blue;
+            //navPage.BarBackground = Colors.Yellow;
+            //navPage.BarTextColor = Colors.Blue;
 
-            MainPage = new AbsoluteLayoutDemo();
+            MainPage = new NavigationPage(new MauiPresentationControls());
         }
     }
 }

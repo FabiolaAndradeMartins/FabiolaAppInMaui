@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FabiolaMauiApp.Pages.MauiPresentationControls"
+             Title="Maui Presentation Controls">
+    <ScrollView>
+        <VerticalStackLayout Padding="10">
+        <BoxView Color="Bisque"
+                CornerRadius="20"
+                WidthRequest="200"
+                HeightRequest="200"
+                VerticalOptions="Center"
+                HorizontalOptions="Start"/>
+
+        <Label
+            Text="Bem-Vindo ao .Net Maui!"
+            CharacterSpacing="1"
+            BackgroundColor="Violet"
+            TextColor="Black"
+            HorizontalTextAlignment="Center"
+            FontSize="Large"
+            FontAttributes="Bold"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"/>
+
+        <Label Text="De tudo que estudei até agora, o que mais me chamou a atenção e que pode ser o que vou fazer no futuro, é o .NET MAUI ou talvez o Blazor. Mas não sei ao certo se programar é para mim."
+               FontSize="Medium"
+               LineHeight=".9"
+               MaxLines="8"/>
+            
+        <Label Text="Texto sublinhado."
+                FontSize="Large"
+                TextDecorations="Underline"/>
+        <Label Text="Texto tachado."
+                FontSize="Large"
+                TextDecorations="Strikethrough"/>
+        <Label Text="Texto sublinhado e taxado."
+                FontSize="Large"
+                TextDecorations="Underline,Strikethrough"/>
+
+        <Label Text="Este texto será exibido em caixa alta."
+               FontSize="Medium"
+               TextTransform="Uppercase"/>
+        
+        <Label Text="Este texto será exibido em caixa baixa."
+               FontSize="Medium"
+               TextTransform="Lowercase"/>
+
+        <Ellipse Fill="Purple"
+                 Stroke="Black"
+                 StrokeThickness="10"
+                 HeightRequest="150"
+                 WidthRequest="150"
+                 HorizontalOptions="Center"/>
+
+            <Line Stroke="OrangeRed"
+               X1="0"
+               Y1="0"
+               X2="300"
+               Y2="50"
+               StrokeThickness="10"/>
+            
+            <Rectangle Fill="Chocolate" 
+                    Stroke="Black"
+                    StrokeThickness="5"
+                    HeightRequest="100"
+                    WidthRequest="130"
+                    HorizontalOptions="End"
+                    RadiusX="10"
+                    RadiusY="10"/>
+            
+            <Polygon Points="40,10,70,80,10,50"
+                  Fill="DarkOliveGreen" 
+                  Stroke="Black"
+                  StrokeThickness="8"/>
+            
+            <Polyline Points="0,0,10,30,
+                   15,0,18,60
+                   23,30,35,30,40,0
+                   43,60 48,30 100,30"
+                   Stroke="Red"/>
+
+            <Path Data="M 10,100 L 100,100  100,50Z"
+               Aspect="Uniform"
+               HorizontalOptions="Center"
+               Stroke="Magenta"/>
+            
+            <Border Stroke="#C49B33"
+                  StrokeThickness="4"
+                  StrokeShape="RoundRectangle 40,0,0,40"
+                  BackgroundColor="AntiqueWhite"
+                  Padding="16,8"
+                  HorizontalOptions="Center">
+                <Label Text="Este é o .NET MAUI"
+                       TextColor="BlueViolet"
+                       FontSize="18"
+                       FontAttributes="Bold"/>
+            </Border>
+
+            <Image Source="logo.png"/>
+
+            <WebView HeightRequest="500"
+                     Source="https://profplugada.blogspot.com/"/>
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+</ContentPage>
