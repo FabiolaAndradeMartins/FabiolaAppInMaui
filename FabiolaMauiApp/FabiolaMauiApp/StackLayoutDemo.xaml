@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FabiolaMauiApp.StackLayoutDemo"
+             Title="StackLayoutDemo">
+    <!--<StackLayout Margin="10" Spacing="10">
+        <Frame BorderColor="BlueViolet"
+               Padding="5">
+            <StackLayout Orientation="Horizontal"
+                         Spacing="15">
+                <BoxView Color="CornflowerBlue"
+                         WidthRequest="40" />
+                <Label 
+                       Text="Texto 1"
+                       FontSize="20"  />
+            </StackLayout>
+        </Frame>        
+        <Frame BorderColor="BlueViolet"
+           Padding="5">
+                <StackLayout Orientation="Horizontal"
+                     Spacing="15">
+                    <BoxView Color="AntiqueWhite"
+                     WidthRequest="40" />
+                    <Label 
+                     Text="Texto 2"
+                     FontSize="20"  />
+                </StackLayout>
+          </Frame>
+
+            --><!--<Label 
+            Text="Texto 2"
+            FontSize="20"
+            BackgroundColor="AntiqueWhite"/> 
+
+        <Label 
+            Text="Texto 3"
+            FontSize="20"
+            BackgroundColor="GreenYellow"/>
+
+        <Label 
+            Text="Texto 4"
+            FontSize="20"
+            BackgroundColor="MediumSeaGreen"/>
+
+        <Label 
+            Text="Texto 5"
+            FontSize="20"
+            BackgroundColor="Lavender"/>--><!--
+        
+        <StackLayout Margin="20">
+            <Label Text="SING IN" FontSize="24"/>
+            <Entry Placeholder="Usuário" PlaceholderColor="Black"/>
+            <Entry Placeholder="Senha" PlaceholderColor="Black"/>
+            <Button Text="LOGIN" FontSize="Large"/>
+        </StackLayout> 
+        
+       
+    </StackLayout>-->
+
+    <VerticalStackLayout Margin="20" HorizontalOptions="Start">
+        <HorizontalStackLayout>
+            <Label Text="Nome"></Label>
+            <Entry WidthRequest="150" HeightRequest="40"></Entry>
+            <Label Text="Informe o nome" TextColor="Red"></Label>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout Margin="20" HorizontalOptions="Start">
+            <Label Text="Idade"></Label>
+            <Entry WidthRequest="150" HeightRequest="40"></Entry>
+            <Label Text="Informe a idade" TextColor="Red"></Label>
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FabiolaMauiApp.AbsoluteLayoutDemo"
+             Title="Absolute Layout Demo">
+    <AbsoluteLayout>
+        <BoxView Color="Coral"
+                 AbsoluteLayout.LayoutFlags="PositionProportional"
+                 AbsoluteLayout.LayoutBounds=".8, .7, 100, 100"/>
+        
+        <BoxView Color="LightBlue"
+           AbsoluteLayout.LayoutFlags="PositionProportional"
+           AbsoluteLayout.LayoutBounds="1, .5, 25, 100"/>
+
+        <BoxView Color="Yellow"
+           AbsoluteLayout.LayoutFlags="PositionProportional"
+           AbsoluteLayout.LayoutBounds="0, .5, 25, 100"/>
+
+        <BoxView Color="LightGreen"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            AbsoluteLayout.LayoutBounds=".5, 0, 100, 25"/>
+
+        <BoxView Color="BlueViolet"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            AbsoluteLayout.LayoutBounds=".5, 1, 100, 25"/>
+
+        <BoxView Color="Cyan"
+            AbsoluteLayout.LayoutFlags="All"
+            AbsoluteLayout.LayoutBounds="0.1, 0.1, 0.3, 0.3"/>
+
+        <BoxView Color="LightPink"
+            AbsoluteLayout.LayoutFlags="All"
+            AbsoluteLayout.LayoutBounds="0.4, 0.4, 0.4, 0.4"/>
+
+        <BoxView Color="Violet"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            AbsoluteLayout.LayoutBounds="0.6, 0.6, 100, 100"/>
+
+        <Button Text="Clique !" BackgroundColor="DarkViolet"
+                AbsoluteLayout.LayoutBounds="0.9,0.1,100,50"
+                AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
+        <Button Text="Clique !" BackgroundColor="DarkCyan"
+         AbsoluteLayout.LayoutBounds="0.9,0.2,100,50"
+         AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
+        <Button Text="Clique !" BackgroundColor="DarkGoldenrod"
+         AbsoluteLayout.LayoutBounds="0.9,0.3,100,50"
+         AbsoluteLayout.LayoutFlags="PositionProportional"/>
+        
+    </AbsoluteLayout>
+</ContentPage>

@@ -57,13 +57,55 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiImage Remove="Resources\Images\bia.png" />
+	  <MauiImage Remove="Resources\Images\fab.jpg" />
+	  <MauiImage Remove="Resources\Images\Nome.jpg" />
+	  <MauiImage Remove="Resources\Images\nome.png" />
+	  <MauiImage Remove="Resources\Images\ProfPlugadasemfundo.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Resources\Images\bell.svg" />
+	  <None Remove="Resources\Images\bia.png" />
+	  <None Remove="Resources\Images\bia2.png" />
+	  <None Remove="Resources\Images\clipboard.svg" />
+	  <None Remove="Resources\Images\fab.jpg" />
+	  <None Remove="Resources\Images\Instagram.png" />
+	  <None Remove="Resources\Images\logo.png" />
+	  <None Remove="Resources\Images\Nome.jpg" />
+	  <None Remove="Resources\Images\nome.png" />
+	  <None Remove="Resources\Images\profplugada.svg" />
+	  <None Remove="Resources\Images\ProfPlugadasemfundo.png" />
+	  <None Remove="Resources\Images\settings.svg" />
+	  <None Remove="Resources\Images\trash.svg" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="AbsoluteLayoutDemo.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="FlexLayoutDemo.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="FlyoutPageDemo.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="GridLayoutDemo.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pages\MinhaPagina.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="StackLayoutDemo.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="TabbedPageDemo.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
