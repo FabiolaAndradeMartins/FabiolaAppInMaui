@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FabiolaMauiApp.Pages.MauiCommandControls"
+             Title="Maui Command Controls">
+    
+    <VerticalStackLayout Margin="10">
+
+        <Button Text="Clique para Rodar o texto!"
+                BackgroundColor="LightGreen"
+                x:Name="btnDemo"
+                Clicked="btnDemo_Clicked" 
+                VerticalOptions="Center"
+                HorizontalOptions="Center"/>
+
+        <Label  Text=".NET MAUI"
+                BackgroundColor="LightCoral"
+                FontSize="25"
+                FontAttributes="Bold"
+                x:Name="lblDemo"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"/>
+
+        <Button Text="Clique para Rodar o texto!"
+                BackgroundColor="LightGreen"
+                ImageSource="android2.svg"
+                x:Name="btnDemo1"
+                Clicked="btnDemo_Clicked" 
+                HeightRequest="100"
+                WidthRequest="400"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"/>
+
+        <ImageButton Source="dotnet_bot.png"
+                     x:Name="btnImgDemo"
+                     Aspect="AspectFit"
+                     BorderColor="Black"
+                     Clicked="btnImgDemo_Clicked"
+                     HeightRequest="100"
+                     WidthRequest="100"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center"/>
+        
+        <StackLayout Padding="20">
+            <Label Text="Qual o seu animal favorito?"
+                   FontSize="Small" TextColor="Blue"/>
+            <RadioButton Content="Gato" Value="Gato" GroupName="Pets"
+                         CheckedChanged="RadioButton_CheckedChanged"/>
+            <RadioButton Content="Cachorro" Value="Cachorro" GroupName="Pets"
+                         CheckedChanged="RadioButton_CheckedChanged"/>
+            <RadioButton Content="Papagaio" Value="Papagaio" GroupName="Pets"                         
+                         CheckedChanged="RadioButton_CheckedChanged"/>
+            <Label x:Name="lblPets" Text=""/>
+        </StackLayout>
+
+        <StackLayout>
+            <SearchBar Placeholder="Procurar produto"
+                       SearchButtonPressed="SearchBar_SearchButtonPressed"   
+                       BackgroundColor="AntiqueWhite"/>
+        </StackLayout>
+        <SwipeView>
+            <SwipeView.LeftItems>
+                <SwipeItems>
+                    <SwipeItem
+                        BackgroundColor="LightBlue"
+                        IconImageSource="cat2.svg"
+                        Invoked="SwipeItem_Invoked"
+                        Text="Gato"/>
+
+                    <SwipeItem
+                        BackgroundColor="LightCoral"
+                        IconImageSource="dog2.svg"
+                        Invoked="SwipeItem_Invoked"
+                        Text="Cachorro"/>
+                </SwipeItems>
+            </SwipeView.LeftItems>
+
+            <SwipeView.RightItems>
+                <SwipeItem
+                        BackgroundColor="LightGreen"
+                        IconImageSource="parrot.svg"
+                        Invoked="SwipeItem_Invoked"
+                        Text="Papagaio"/>
+            </SwipeView.RightItems>
+            <Grid BackgroundColor="LightGray"
+                  HeightRequest="60"
+                  WidthRequest="300">
+                <Label HorizontalOptions="Center"
+                       Text="&lt;== Deslizar ==>"
+                       FontSize="Medium"
+                       VerticalOptions="Center"/>
+            </Grid>
+        </SwipeView>
+    </VerticalStackLayout>
+</ContentPage>
