@@ -13,7 +13,7 @@ namespace FabiolaMauiApp
             //navPage.BarBackground = Colors.Yellow;
             //navPage.BarTextColor = Colors.Blue;
 
-            MainPage = new NavigationPage(new MauiCommandControls());
+            MainPage = new NavigationPage(new MauiSetValueControls());
         }
     }
 }

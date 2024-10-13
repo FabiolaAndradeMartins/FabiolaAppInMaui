@@ -74,6 +74,7 @@
 	  <None Remove="Resources\Images\dog2.svg" />
 	  <None Remove="Resources\Images\fab.jpg" />
 	  <None Remove="Resources\Images\Instagram.png" />
+	  <None Remove="Resources\Images\koala.svg" />
 	  <None Remove="Resources\Images\logo.png" />
 	  <None Remove="Resources\Images\Nome.jpg" />
 	  <None Remove="Resources\Images\nome.png" />
@@ -101,6 +102,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="GridLayoutDemo.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="MauiSetValueControls.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\MauiCommandControls.xaml">
