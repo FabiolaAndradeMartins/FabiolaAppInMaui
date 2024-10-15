@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:models="clr-namespace:FabiolaMauiApp.Models"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FabiolaMauiApp.MainPage">
 
-    <ScrollView>
+    <!--<ScrollView>
         <VerticalStackLayout
-            Padding="30,0"
+            --><!--Padding="30,0"
             Spacing="25">
             <Image
                 Source="dotnet_bot.png"
@@ -16,7 +17,7 @@
             <Label
                 Text="Hello, World!"
                 Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level1" />
+                SemanticProperties.HeadingLevel="Level1" />--><!--
 
             <Label
                 Text="Welcome to &#10;.NET Multi-platform App UI"
@@ -31,6 +32,43 @@
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Fill" />
         </VerticalStackLayout>
+    </ScrollView>-->
+
+    <ContentPage.BindingContext>
+        <models:Produto x:Name="produto"
+                        Nome="IPhone 10"
+                        Preco="5000"
+                        Estoque="5"/>
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label x:Name="lblNome"
+                Text="{Binding  Source={x:Reference produto}, Path=Nome}"
+                FontSize="30"
+                HorizontalOptions="Center"/>
+
+            <Label x:Name="lblPreco"
+                Text="{Binding  Source={x:Reference produto}, Path=Preco, StringFormat='R$ {0:F2}'}"
+                FontSize="20"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+            
+
+            <Label x:Name="lblEstoque"
+                Text="{Binding  Source={x:Reference produto}, Path=Estoque, StringFormat='Quantidade : {0}'}"
+                FontSize="20"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+
+            <!--<Button
+                x:Name="CounterBtn"
+                Text="Clique para realizar o DataBinding"                 
+                Clicked="CounterBtn_Clicked"
+                HorizontalOptions="Center" />-->
+
+        </VerticalStackLayout>
+            
     </ScrollView>
 
 </ContentPage>
