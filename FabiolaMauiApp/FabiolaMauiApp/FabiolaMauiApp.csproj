@@ -73,6 +73,11 @@
 	  <None Remove="Resources\Images\clipboard.svg" />
 	  <None Remove="Resources\Images\dog2.svg" />
 	  <None Remove="Resources\Images\fab.jpg" />
+	  <None Remove="Resources\Images\galaxia1.jpg" />
+	  <None Remove="Resources\Images\galaxia2.jpg" />
+	  <None Remove="Resources\Images\galaxia3.jpg" />
+	  <None Remove="Resources\Images\galaxia4.jpg" />
+	  <None Remove="Resources\Images\galaxia5.jpg" />
 	  <None Remove="Resources\Images\Instagram.png" />
 	  <None Remove="Resources\Images\koala.svg" />
 	  <None Remove="Resources\Images\logo.png" />
@@ -105,6 +110,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="MauiSetValueControls.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\MauiCollectionControls.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\MauiCommandControls.xaml">
