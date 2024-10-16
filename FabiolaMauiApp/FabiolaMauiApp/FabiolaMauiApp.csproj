@@ -65,13 +65,22 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Fonts\ArchitectsDaughter.ttf" />
+	  <None Remove="Resources\Fonts\Chantelli_Antiqua.ttf" />
+	  <None Remove="Resources\Fonts\DeliusSwashCaps-Regular.ttf" />
+	  <None Remove="Resources\Fonts\Digory_Doodles_PS.ttf" />
+	  <None Remove="Resources\Fonts\fontello.ttf" />
+	  <None Remove="Resources\Fonts\Kingthings_Foundation.ttf" />
+	  <None Remove="Resources\Fonts\Lilly__.ttf" />
 	  <None Remove="Resources\Images\android2.svg" />
 	  <None Remove="Resources\Images\bell.svg" />
 	  <None Remove="Resources\Images\bia.png" />
 	  <None Remove="Resources\Images\bia2.png" />
 	  <None Remove="Resources\Images\cat2.svg" />
 	  <None Remove="Resources\Images\clipboard.svg" />
+	  <None Remove="Resources\Images\computador.png" />
 	  <None Remove="Resources\Images\dog2.svg" />
+	  <None Remove="Resources\Images\einstein.jpg" />
 	  <None Remove="Resources\Images\fab.jpg" />
 	  <None Remove="Resources\Images\galaxia1.jpg" />
 	  <None Remove="Resources\Images\galaxia2.jpg" />
@@ -87,7 +96,10 @@
 	  <None Remove="Resources\Images\profplugada.svg" />
 	  <None Remove="Resources\Images\ProfPlugadasemfundo.png" />
 	  <None Remove="Resources\Images\settings.svg" />
+	  <None Remove="Resources\Images\supergirl.gif" />
+	  <None Remove="Resources\Images\tenis.jpg" />
 	  <None Remove="Resources\Images\trash.svg" />
+	  <None Remove="Resources\Raw\demo.json" />
 	</ItemGroup>
 
 	<ItemGroup>
