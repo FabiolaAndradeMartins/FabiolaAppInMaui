@@ -6,79 +6,86 @@ namespace FabiolaMauiApp
 
     public partial class MainPage : ContentPage
     {
-		Pessoa pessoa;
-        public MainPage()
+		decimal conta;
+		int gorjeta;
+		int numeroPessoas = 1;
+		public MainPage()
         {
             InitializeComponent();
         }
 
-		public class Pessoa
+		private void txtConta_Completed(object sender, EventArgs e)
 		{
-			public string Nome { get; set; }
-			public string Sobrenome { get; set; }
-			public int Idade { get; set; }
-			public string Foto { get; set; }
+			conta = decimal.Parse(txtConta.Text);
+			CalcularTotal();
 		}
 
-		protected override async void OnAppearing()
+		private void CalcularTotal()
 		{
-			base.OnAppearing();
-			await LoadMauiAsset();
+			//Total gorjeta
+			var totalGorjeta =
+				 (conta * gorjeta) / 100;
+
+
+			var gorjetaPorPessoa = (totalGorjeta / numeroPessoas);
+			lblGorjetaPessoa.Text = $"{gorjetaPorPessoa:C}";
+
+			//Subtotal
+			var subtotal = (conta / numeroPessoas);
+			lblSubtotal.Text = $"{subtotal:C}";
+
+			//Total
+			var totalPorPessoa =
+				 (conta + totalGorjeta) / numeroPessoas;
+			lblTotal.Text = $"{totalPorPessoa:C}";
 		}
 
-		async Task LoadMauiAsset()
+		private void sldGorjeta_ValueChanged(object sender, ValueChangedEventArgs e)
 		{
-			using var stream = await FileSystem.OpenAppPackageFileAsync("demo.json");
-			using var reader = new StreamReader(stream);
-
-			var contents = reader.ReadToEnd();
-
-			var pessoa = JsonSerializer.Deserialize<Pessoa>(contents);
-
-			BindingContext = pessoa;
-
-
+			gorjeta = (int)sldGorjeta.Value;
+			lblGorjeta.Text = $"Gorjeta: {gorjeta}%";
+			CalcularTotal();
 		}
 
+		private void Button_Clicked(object sender, EventArgs e)
+		{
+			if (sender is Button)
+			{
+				var btn = (Button)sender;
+				var percentage =
+					 int.Parse(btn.Text.Replace("%", ""));
+				sldGorjeta.Value = percentage;
+			}
+		}
 
-		//	private void CounterBtn_Clicked(object sender, EventArgs e)
-		//	{
-		//		{
-		//			var produto = new Produto
-		//			{
-		//				Nome = "IPhone 5",
-		//				Preco = 5000.00m,
-		//				Estoque = 5
-		//			};
+		private void btnMenos_Clicked(object sender, EventArgs e)
+		{
+			if (numeroPessoas > 1)
+			{
+				numeroPessoas--;
+			}
+			lblNoPessoas.Text = numeroPessoas.ToString();
+			CalcularTotal();
+		}
 
-		//			//Binding produtoBinding = new Binding();
-		//			//produtoBinding.Source = produto;
-		//			//produtoBinding.Path = "Nome";
+		private void btnMais_Clicked(object sender, EventArgs e)
+		{
+			numeroPessoas++;
+			lblNoPessoas.Text = numeroPessoas.ToString();
+			CalcularTotal();
+		}
 
-		//			Binding nomeBinding = new Binding 
-		//			{ Source = produto, 
-		//			  Path = "Nome",
-		//			  StringFormat = "Produto: {0}" };
-		//			lblNome.SetBinding(Label.TextProperty, nomeBinding);
-		//			//lblNome.SetBinding(Label.TextProperty, produtoBinding);
+		private void btnIniciar_Clicked(object sender, EventArgs e)
+		{
+			conta = 0.00m;
+			gorjeta = 0;
+			txtConta.Text = "";
+			sldGorjeta.Value = 0;
+			lblNoPessoas.Text = "1";
+			numeroPessoas = 1;
+			CalcularTotal();
+		}
 
-		//			Binding precoBinding = new Binding
-		//			{
-		//				Source = produto,
-		//				Path = "Preco",
-		//				StringFormat = "Preço: {0}"
-		//			};
-		//			lblPreco.SetBinding(Label.TextProperty, precoBinding);
-
-		//			Binding estoqueBinding = new Binding
-		//			{
-		//				Source = produto,
-		//				Path = "Estoque",
-		//				StringFormat = "Estoque: {0}"
-		//			};
-		//			lblEstoque.SetBinding(Label.TextProperty, estoqueBinding);
-		//		}
-		//	}
 	}
 
 }
